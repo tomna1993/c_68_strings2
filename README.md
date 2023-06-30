@@ -22,3 +22,7 @@ After that we can copy or place any string into that memory field but we have to
 ```c
 strcpy(string, "Hi!");
 ```
+
+Malloc has a return value of a pointer, the address of the start of the memory allocated. If memory allocation fails, `malloc` will return `NULL`.
+
+When the program stops runnig, the operating system automatically release all the memory allocated by the program but as a good practice when we are not in need of memory anymore then we should release that memory by calling the function `free()`.
