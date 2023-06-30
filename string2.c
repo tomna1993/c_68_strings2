@@ -14,6 +14,13 @@ int main(void)
     // then move the string into that allocated memory field; f.e. with strcpy
     char *s = malloc(MAX_CHARS);
 
+    // If memory allocation fails, malloc returns with the NULL pointer
+    if (s == NULL)
+    {
+        printf ("Memory allocation failed!\n");
+        return EXIT_FAILURE;
+    }
+
     // After this the value of s can be modified but have to be careful with it to 
     // not go beyond the MAX_CHARS limit
     strcpy(s, "hi!");
